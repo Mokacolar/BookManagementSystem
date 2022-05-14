@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <h1><a href="/">도서목록 관리 시스템</a> </h1>
+        <table border ="1" width="50%" height=200 bordercolor="black">
+            <thead>
+            <tr>
+                <th>목록</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>publisher</td>
+                <td>price</td>
+            </tr>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.name}"></td>
+                <td th:text="${book.publisher}"></td>
+                <td th:text="${book.price}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
